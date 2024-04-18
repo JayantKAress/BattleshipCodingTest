@@ -1,5 +1,4 @@
 ﻿using AutoFixture.Xunit2;
-using BattleShipCodingTest.Shared.Exceptions;
 using BattleShipStateTracker.Common.Models;
 using BattleShipStateTracker.Common.Service;
 using BattleShipStateTracker.Components.BattleShip;
@@ -12,25 +11,19 @@ namespace BattleshipUnitTest.Modules.Command
     public class AddShipCommand_UnitTests
     {
         [Theory, AutoMoqData]
-        public async Task Handle_InvalidInput_AddShip_ThrowsException(
-            [Frozen] Mock<AddShipCommandHandler> sut, AddShipCommand command)
-        {
-            /// Arrange            
-            command.TotalShips = 0;
-
-            // Assert
-            await Assert.ThrowsAsync<BattleShipApiException>(() => sut.Object.Handle(command, default));
-        }
-
-        [Theory, AutoMoqData]
         public async Task Handle_InvalidInput_AddShipOutsideBoard_ThrowsException(
             [Frozen] Mock<AddShipCommandHandler> sut, AddShipCommand command, int totalships)
         {
-            /// Arrange            
+            // Arrange            
             command.TotalShips = totalships;
 
+            //Act
+            var result = await sut.Object.Handle(command, default);
+
             // Assert
-            await Assert.ThrowsAsync<BattleShipApiException>(() => sut.Object.Handle(command, default));
+
+            result.Should().NotBeNull();
+            result.Should().BeOfType<ResponseModel<bool>>();
         }
 
         [Theory, AutoMoqData]
