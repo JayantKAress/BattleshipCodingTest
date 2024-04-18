@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BattleShipStateTracker", "BattleShipStateTracker.csproj", "{AC8D3190-AADB-4339-97FC-1208E169B917}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BattleShipUnitTest", "..\BattleShipUnitTest\BattleShipUnitTest.csproj", "{965774CE-64A3-4529-864E-C05E615B2952}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC8D3190-AADB-4339-97FC-1208E169B917}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC8D3190-AADB-4339-97FC-1208E169B917}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC8D3190-AADB-4339-97FC-1208E169B917}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC8D3190-AADB-4339-97FC-1208E169B917}.Release|Any CPU.Build.0 = Release|Any CPU
+		{965774CE-64A3-4529-864E-C05E615B2952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{965774CE-64A3-4529-864E-C05E615B2952}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{965774CE-64A3-4529-864E-C05E615B2952}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{965774CE-64A3-4529-864E-C05E615B2952}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8ED8B370-298B-4166-805B-61D166043ADA}
+	EndGlobalSection
+EndGlobal
