@@ -49,7 +49,7 @@ namespace BattleShipStateTracker.Functions
         }
 
         [FunctionName("FireShip")]
-        public async Task<IActionResult> FireShip([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "FireShip/{xCordinate},{yCoordinate}")] FireShipCommand fireShipCommand)
+        public async Task<IActionResult> FireShip([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "FireShip")] FireShipCommand fireShipCommand)
         {
             return await Ok(fireShipCommand);
         }
